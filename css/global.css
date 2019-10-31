@@ -1,0 +1,119 @@
+.bg{
+    background: url('../images/ambiente-min.jpg') no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+}
+
+.Invitacion{
+  position: absolute;
+  top: 5vh;
+  background: #f2f2f2;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+  justify-content: center;
+}
+
+.container-formulario{
+  position: absolute;
+  top: 5vh;
+  background: #f2f2f2;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px #000;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 678px){
+  .h1{
+    color: #ffffff;
+    text-shadow: 2px 2px #435B33;
+  }
+  .label-input100{
+    font-weight: bold;
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 2px 2px #435B33;
+  }
+  .container-formulario{
+    background: rgb(255, 255, 255);
+    background: rgba(171, 170, 170, 0.6);
+  }
+  .bg{
+    background-size: 250%;
+    height: 250vh;
+    background-repeat: repeat-y;
+  }
+  .text-center{
+    color: #ffffff;
+    text-shadow: 2px 2px #435B33;
+  }
+}
+
+
+/** Posicion de la alerta? **/
+.validate-input {
+  position: relative;
+}
+
+/** formato alerta **/
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: #fff;
+  border: 1px solid #c80000;
+  border-radius: 2px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 2px;
+  pointer-events: none;
+
+  font-family: Poppins-Regular;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f12a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 678px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
